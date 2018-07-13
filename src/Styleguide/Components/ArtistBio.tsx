@@ -1,15 +1,25 @@
+import { ArtistBio_bio } from "__generated__/ArtistBio_bio.graphql"
+import { track } from "Analytics"
+import * as Schema from "Analytics/Schema"
 import React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { Responsive } from "Utils/Responsive"
 import { ReadMore } from "./ReadMore"
 
-import { ArtistBio_bio } from "__generated__/ArtistBio_bio.graphql"
-
 interface Props {
   bio: ArtistBio_bio
 }
 
+@track({ context_module: "Artist bio" })
 export class ArtistBio extends React.Component<Props> {
+  @track({
+    action_type: Schema.ActionTypes.Click,
+    action_name: Schema.ActionNames.ReadMoreExpanded,
+  })
+  handleExpand() {
+    // no-op
+  }
+
   render() {
     const blurb = (
       <div
@@ -23,9 +33,20 @@ export class ArtistBio extends React.Component<Props> {
       <Responsive>
         {({ xs }) => {
           if (xs) {
-            return <ReadMore>{blurb}</ReadMore>
+            return (
+              <ReadMore onExpand={this.handleExpand.bind(this)}>
+                {blurb}
+              </ReadMore>
+            )
           } else {
-            return <ReadMore maxLineCount={7}>{blurb}</ReadMore>
+            return (
+              <ReadMore
+                onExpand={this.handleExpand.bind(this)}
+                maxLineCount={7}
+              >
+                {blurb}
+              </ReadMore>
+            )
           }
         }}
       </Responsive>

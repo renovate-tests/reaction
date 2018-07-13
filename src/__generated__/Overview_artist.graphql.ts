@@ -7,6 +7,7 @@ export type Overview_artist = {
     readonly counts: ({
         readonly partner_shows: any | null;
     }) | null;
+    readonly href: string | null;
     readonly is_consignable: boolean | null;
 };
 
@@ -61,25 +62,19 @@ return {
     {
       "kind": "LinkedField",
       "alias": null,
-      "name": "exhibition_highlights",
-      "storageKey": "exhibition_highlights(size:3)",
-      "args": [
-        {
-          "kind": "Literal",
-          "name": "size",
-          "value": 3,
-          "type": "Int"
-        }
-      ],
-      "concreteType": "Show",
-      "plural": true,
+      "name": "counts",
+      "storageKey": null,
+      "args": null,
+      "concreteType": "ArtistCounts",
+      "plural": false,
       "selections": [
         {
-          "kind": "FragmentSpread",
-          "name": "SelectedExhibitions_exhibitions",
-          "args": null
-        },
-        v0
+          "kind": "ScalarField",
+          "alias": null,
+          "name": "partner_shows",
+          "args": null,
+          "storageKey": null
+        }
       ]
     },
     {
@@ -105,27 +100,40 @@ return {
       "storageKey": null
     },
     {
+      "kind": "LinkedField",
+      "alias": null,
+      "name": "exhibition_highlights",
+      "storageKey": "exhibition_highlights(size:3)",
+      "args": [
+        {
+          "kind": "Literal",
+          "name": "size",
+          "value": 3,
+          "type": "Int"
+        }
+      ],
+      "concreteType": "Show",
+      "plural": true,
+      "selections": [
+        {
+          "kind": "FragmentSpread",
+          "name": "SelectedExhibitions_exhibitions",
+          "args": null
+        },
+        v0
+      ]
+    },
+    {
       "kind": "FragmentSpread",
       "name": "ArtistBio_bio",
       "args": null
     },
     {
-      "kind": "LinkedField",
+      "kind": "ScalarField",
       "alias": null,
-      "name": "counts",
-      "storageKey": null,
+      "name": "href",
       "args": null,
-      "concreteType": "ArtistCounts",
-      "plural": false,
-      "selections": [
-        {
-          "kind": "ScalarField",
-          "alias": null,
-          "name": "partner_shows",
-          "args": null,
-          "storageKey": null
-        }
-      ]
+      "storageKey": null
     },
     {
       "kind": "ScalarField",
