@@ -117,7 +117,7 @@ const Check = ({ color }) => (
     viewBox="0 0 20 20"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <path fill="none" stroke={color} stroke-width="2" d="M4 9.7L8.2 14 16 6" />
+    <path fill="none" stroke={color} strokeWidth="2" d="M4 9.7L8.2 14 16 6" />
   </StyledSvg>
 )
 
