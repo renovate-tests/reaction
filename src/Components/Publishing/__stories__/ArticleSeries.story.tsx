@@ -9,7 +9,7 @@ import {
   VideoArticle,
 } from "../Fixtures/Articles"
 
-storiesOf("Legacy/Publishing/Articles/Series", module)
+storiesOf("⚠️Legacy/Publishing/Articles/Series", module)
   .add("Series", () => {
     return (
       <Article

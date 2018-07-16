@@ -5,7 +5,7 @@ import { color, space } from "styled-system"
 import { Section } from "Styleguide/Utils/Section"
 import { Button } from "../"
 
-storiesOf("Legacy/Styleguide/Elements", module).add("Button", () => {
+storiesOf("⚠️Legacy/Styleguide/Elements", module).add("Button", () => {
   return (
     <React.Fragment>
       <Section title="primaryBlack">

@@ -1,12 +1,12 @@
 import { storiesOf } from "@storybook/react"
 import React from "react"
 
-storiesOf("Core/Tokens", module)
+storiesOf("A. Core/Tokens", module)
   .add("Color", () => <div />)
   .add("Typography", () => <div />)
   .add("Spacing", () => <div />)
 
-storiesOf("Core/Elements", module)
+storiesOf("A. Core/Elements", module)
   .add("Alert Banner", () => <div />)
   .add("Avatar", () => <div />)
   .add("Buttons", () => <div />)
@@ -18,8 +18,8 @@ storiesOf("Core/Elements", module)
   .add("Pagination", () => <div />)
   .add("Nagivation", () => <div />)
 
-storiesOf("Core/Components", module).add("placeholder", () => <div />)
+storiesOf("A. Core/Components", module).add("placeholder", () => <div />)
 
-storiesOf("Partner Components", module).add("placeholder", () => <div />)
+storiesOf("B. Collector components", module).add("placeholder", () => <div />)
 
-storiesOf("Collector Components", module).add("placeholder", () => <div />)
+storiesOf("C. Partner components", module).add("placeholder", () => <div />)

@@ -12,7 +12,7 @@ import {
   VideoArticleSponsored,
 } from "../Fixtures/Articles"
 
-storiesOf("Legacy/Publishing/Articles/Video", module)
+storiesOf("⚠️Legacy/Publishing/Articles/Video", module)
   .add("Video", () => {
     return <Article article={VideoArticle} />
   })

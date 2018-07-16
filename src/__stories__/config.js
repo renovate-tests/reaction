@@ -12,7 +12,10 @@ setOptions({
 })
 
 function loadStories() {
-  req.keys().forEach(filename => req(filename))
+  req.keys().forEach(filename => {
+    console.log(filename)
+    return req(filename)
+  })
 }
 
 setDefaults({

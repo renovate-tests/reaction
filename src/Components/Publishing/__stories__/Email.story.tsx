@@ -3,7 +3,7 @@ import React from "react"
 import { EmailPanel } from "../Email/EmailPanel"
 import { InstantArticleEmailSignup } from "../Email/InstantArticleEmailSignup"
 
-storiesOf("Legacy/Publishing/Email", module)
+storiesOf("⚠️Legacy/Publishing/Email", module)
   .add("Email Panel Signup", () => {
     return <EmailPanel signupUrl="#" />
   })

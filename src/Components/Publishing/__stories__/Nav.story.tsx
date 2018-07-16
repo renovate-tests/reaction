@@ -4,7 +4,7 @@ import { SponsoredArticle } from "../Fixtures/Articles"
 import { Nav } from "../Nav/Nav"
 import { NewsNav } from "../Nav/NewsNav"
 
-storiesOf("Legacy/Publishing/Nav", module)
+storiesOf("⚠️Legacy/Publishing/Nav", module)
   .add("Regular", () => {
     return (
       <div>

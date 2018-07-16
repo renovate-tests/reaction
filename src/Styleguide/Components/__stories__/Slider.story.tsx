@@ -7,7 +7,7 @@ import { Box } from "Styleguide/Elements/Box"
 import { Image } from "Styleguide/Elements/Image"
 import { Section } from "Styleguide/Utils/Section"
 
-storiesOf("Legacy/Styleguide/Components", module).add("Slider", () => {
+storiesOf("⚠️Legacy/Styleguide/Components", module).add("Slider", () => {
   return (
     <React.Fragment>
       <Section title="Responsive Slider">

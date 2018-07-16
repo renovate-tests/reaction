@@ -8,7 +8,7 @@ import InvertedButton from "../Buttons/Inverted"
 import MultiStateButton, { MultiButtonState } from "../Buttons/MultiStateButton"
 import TwitterButton from "../Buttons/Twitter"
 
-storiesOf("Legacy/Components/Buttons", module)
+storiesOf("⚠️Legacy/Components/Buttons", module)
   .add("Default Button", () => {
     return (
       <div>

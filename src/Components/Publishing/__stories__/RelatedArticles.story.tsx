@@ -4,7 +4,7 @@ import { RelatedCanvas, RelatedPanel } from "../Fixtures/Components"
 import { RelatedArticlesCanvas } from "../RelatedArticles/RelatedArticlesCanvas"
 import { RelatedArticlesPanel } from "../RelatedArticles/RelatedArticlesPanel"
 
-storiesOf("Legacy/Publishing/Related Articles/Canvas", module)
+storiesOf("⚠️Legacy/Publishing/Related Articles/Canvas", module)
   .add("With vertical", () => {
     return (
       <RelatedArticlesCanvas
@@ -20,6 +20,6 @@ storiesOf("Legacy/Publishing/Related Articles/Canvas", module)
     return <RelatedArticlesCanvas articles={RelatedCanvas} />
   })
 
-storiesOf("Legacy/Publishing/Related Articles/Panel", module).add("Panel", () => {
+storiesOf("⚠️Legacy/Publishing/Related Articles/Panel", module).add("Panel", () => {
   return <RelatedArticlesPanel articles={RelatedPanel} />
 })

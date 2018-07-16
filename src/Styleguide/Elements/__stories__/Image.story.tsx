@@ -4,7 +4,7 @@ import { Section } from "Styleguide/Utils/Section"
 import { BorderBox } from "../Box"
 import { Image, ResponsiveImage } from "../Image"
 
-storiesOf("Legacy/Styleguide/Elements", module).add("Image", () => {
+storiesOf("⚠️Legacy/Styleguide/Elements", module).add("Image", () => {
   return (
     <React.Fragment>
       <Section title="Default Image">

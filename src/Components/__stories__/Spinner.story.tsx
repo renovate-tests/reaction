@@ -3,7 +3,7 @@ import React from "react"
 
 import Spinner from "../Spinner"
 
-storiesOf("Legacy/Components/Spinner", module)
+storiesOf("⚠️Legacy/Components/Spinner", module)
   .add("Default Spinner", () => {
     return (
       <div>

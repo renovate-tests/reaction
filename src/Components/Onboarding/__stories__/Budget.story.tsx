@@ -4,7 +4,7 @@ import React from "react"
 import { ContextProvider } from "../../Artsy"
 import Budget from "../Steps/Budget"
 
-storiesOf("Legacy/Onboarding", module).add("Budget", () => {
+storiesOf("⚠️Legacy/Onboarding", module).add("Budget", () => {
   return (
     <div>
       <ContextProvider>

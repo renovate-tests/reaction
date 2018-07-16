@@ -8,7 +8,7 @@ import React from "react"
 import { storiesOf } from "storybook/storiesOf"
 import { Section } from "Styleguide/Utils/Section"
 
-storiesOf("Legacy/Styleguide/Artwork/Sidebar", module).add("SizeInfo", () => {
+storiesOf("⚠️Legacy/Styleguide/Artwork/Sidebar", module).add("SizeInfo", () => {
   return (
     <React.Fragment>
       <Section title="Artwork with Size and Edition of presentt">

@@ -8,7 +8,7 @@ import React from "react"
 import { storiesOf } from "storybook/storiesOf"
 import { Section } from "Styleguide/Utils/Section"
 
-storiesOf("Legacy/Styleguide/Artwork/Sidebar", module).add(
+storiesOf("⚠️Legacy/Styleguide/Artwork/Sidebar", module).add(
   "AuctionPartnerInfo",
   () => {
     return (

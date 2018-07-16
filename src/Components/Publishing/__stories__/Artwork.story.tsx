@@ -3,7 +3,7 @@ import React from "react"
 import { Artworks } from "../Fixtures/Components"
 import { Artwork } from "../Sections/Artwork"
 
-storiesOf("Legacy/Publishing/Artwork", module)
+storiesOf("⚠️Legacy/Publishing/Artwork", module)
   .add("Single artist", () => {
     return (
       <div style={{ width: 800 }}>

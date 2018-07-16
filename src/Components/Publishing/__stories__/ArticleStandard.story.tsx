@@ -13,7 +13,7 @@ import { ContextProvider } from "../../Artsy"
 import { Display, RelatedCanvas, RelatedPanel } from "../Fixtures/Components"
 import { ArticleData } from "../Typings"
 
-const story = storiesOf("Legacy/Publishing/Articles/Standard", module)
+const story = storiesOf("⚠️Legacy/Publishing/Articles/Standard", module)
   .add("Standard", () => {
     return (
       <ContextProvider>

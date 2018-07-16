@@ -22,7 +22,7 @@ function ArtworkExample(props: { artworkID: string }) {
   )
 }
 
-storiesOf("Legacy/Components/Inquiry Artwork", module)
+storiesOf("⚠️Legacy/Components/Inquiry Artwork", module)
   .add("A square artwork", () => (
     <ArtworkExample artworkID="christopher-burkett-coastal-storm-oregon" />
   ))

@@ -19,7 +19,7 @@ import {
   UnitPanelVideo,
 } from "../Fixtures/Components"
 
-const story = storiesOf("Legacy/Publishing/Display/Panel", module)
+const story = storiesOf("⚠️Legacy/Publishing/Display/Panel", module)
   .add("Panel", () => {
     return <DisplayPanel unit={UnitPanel} campaign={Campaign} />
   })
@@ -62,7 +62,7 @@ mobileAdInsertions.forEach(([label, unit]) => {
   })
 })
 
-storiesOf("Legacy/Publishing/Display/Canvas", module)
+storiesOf("⚠️Legacy/Publishing/Display/Canvas", module)
   .add("Overlay", () => {
     return <DisplayCanvas unit={UnitCanvasOverlay} campaign={Campaign} />
   })

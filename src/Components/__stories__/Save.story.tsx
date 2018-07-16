@@ -22,7 +22,7 @@ function ArtworkExample(props: { artworkID: string }) {
   )
 }
 
-storiesOf("Legacy/Components/Save Button", module).add("Save Button", () => {
+storiesOf("⚠️Legacy/Components/Save Button", module).add("Save Button", () => {
   return (
     <div style={{ width: "200px" }}>
       <ArtworkExample artworkID="damon-zucconi-tetradic-edit-1" />

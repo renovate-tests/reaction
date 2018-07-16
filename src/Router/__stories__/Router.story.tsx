@@ -74,6 +74,6 @@ const routes = [
   },
 ]
 
-storiesOf("Legacy/SSR Router/Example", module).add("Example Router App", () => {
+storiesOf("⚠️Legacy/SSR Router/Example", module).add("Example Router App", () => {
   return <StorybooksRouter routes={routes} />
 })

@@ -14,7 +14,7 @@ import React from "react"
 import { storiesOf } from "storybook/storiesOf"
 import { Section } from "Styleguide/Utils/Section"
 
-storiesOf("Legacy/Styleguide/Artwork/Sidebar", module).add("CurrentBidInfo", () => {
+storiesOf("⚠️Legacy/Styleguide/Artwork/Sidebar", module).add("CurrentBidInfo", () => {
   return (
     <React.Fragment>
       <Section title="Closed auction">

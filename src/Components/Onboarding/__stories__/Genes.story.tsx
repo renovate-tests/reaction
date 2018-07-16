@@ -4,7 +4,7 @@ import * as React from "react"
 import { ContextProvider } from "../../Artsy"
 import Genes from "../Steps/Genes"
 
-storiesOf("Legacy/Onboarding", module).add("Gene Follow", () => {
+storiesOf("⚠️Legacy/Onboarding", module).add("Gene Follow", () => {
   return (
     <ContextProvider>
       <Genes onNextButtonPressed={null} />

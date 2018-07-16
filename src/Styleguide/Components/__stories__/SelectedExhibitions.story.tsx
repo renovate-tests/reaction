@@ -7,7 +7,7 @@ import {
   SelectedExhibitionsContainer,
 } from "../SelectedExhibitions"
 
-storiesOf("Legacy/Styleguide/Components", module).add("SelectedExhibitions", () => {
+storiesOf("⚠️Legacy/Styleguide/Components", module).add("SelectedExhibitions", () => {
   return (
     <React.Fragment>
       <Section title="3 exhibitions responsive">

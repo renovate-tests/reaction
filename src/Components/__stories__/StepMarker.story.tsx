@@ -14,7 +14,7 @@ const steps = [
     label: "Review",
   },
 ]
-storiesOf("Legacy/Components/StepMarker", module)
+storiesOf("⚠️Legacy/Components/StepMarker", module)
   .add("Basic - Start", () => {
     return (
       <Container>

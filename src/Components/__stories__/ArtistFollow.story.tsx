@@ -23,7 +23,7 @@ function ArtistExample(props: { artistID: string }) {
   )
 }
 
-storiesOf("Legacy/Components/Follow Button", module).add(
+storiesOf("⚠️Legacy/Components/Follow Button", module).add(
   "Follow Button (artist)",
   () => {
     return (

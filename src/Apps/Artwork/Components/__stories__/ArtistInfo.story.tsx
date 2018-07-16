@@ -7,7 +7,7 @@ import { Col, Grid, Row } from "Styleguide/Elements/Grid"
 import { Section } from "Styleguide/Utils/Section"
 import { ArtistInfo } from "../ArtistInfo"
 
-storiesOf("Legacy/Styleguide/Artwork", module).add("ArtistInfo", () => {
+storiesOf("⚠️Legacy/Styleguide/Artwork", module).add("ArtistInfo", () => {
   return (
     <React.Fragment>
       <Section title="Artist Info">

@@ -17,7 +17,7 @@ const Subtitle = styled.h2`
   ${unica("s16", "regular")};
 `
 
-storiesOf("Legacy/Components/Input", module)
+storiesOf("⚠️Legacy/Components/Input", module)
   .add("Default Input", () => (
     <div style={{ padding: 10 }}>
       <Title>Input</Title>

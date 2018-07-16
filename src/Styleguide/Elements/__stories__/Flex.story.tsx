@@ -3,7 +3,7 @@ import { storiesOf } from "storybook/storiesOf"
 import { Flex } from "Styleguide/Elements/Flex"
 import { Section } from "Styleguide/Utils/Section"
 
-storiesOf("Legacy/Styleguide/Elements", module).add("Flex", () => {
+storiesOf("⚠️Legacy/Styleguide/Elements", module).add("Flex", () => {
   return (
     <Section title="Flex">
       <Flex>

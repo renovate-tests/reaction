@@ -12,7 +12,7 @@ import { Authors } from "../Fixtures/Components"
 import { EditableChild } from "../Fixtures/Helpers"
 import { Authors as AuthorInfo } from "../Sections/Authors"
 
-storiesOf("Legacy/Publishing/Byline/Author", module)
+storiesOf("⚠️Legacy/Publishing/Byline/Author", module)
   .add("Author", () => {
     return <Author authors={[{ name: "Molly Gottschalk" }]} />
   })
@@ -28,7 +28,7 @@ storiesOf("Legacy/Publishing/Byline/Author", module)
     )
   })
 
-storiesOf("Legacy/Publishing/Byline/Date", module)
+storiesOf("⚠️Legacy/Publishing/Byline/Date", module)
   .add("Date", () => {
     return <Date date="2017-05-19T13:09:18.567Z" />
   })
@@ -36,7 +36,7 @@ storiesOf("Legacy/Publishing/Byline/Date", module)
     return <Date date="2017-05-19T13:09:18.567Z" layout="condensed" />
   })
 
-storiesOf("Legacy/Publishing/Byline/Share", module)
+storiesOf("⚠️Legacy/Publishing/Byline/Share", module)
   .add("Share", () => {
     return (
       <div>
@@ -70,7 +70,7 @@ storiesOf("Legacy/Publishing/Byline/Share", module)
       </div>
     )
   })
-storiesOf("Legacy/Publishing/Byline/Byline", module)
+storiesOf("⚠️Legacy/Publishing/Byline/Byline", module)
   .add("Byline", () => {
     return (
       <div>
@@ -106,14 +106,14 @@ storiesOf("Legacy/Publishing/Byline/Byline", module)
       </div>
     )
   })
-storiesOf("Legacy/Publishing/Byline/ShareDate", module).add("Share Date", () => {
+storiesOf("⚠️Legacy/Publishing/Byline/ShareDate", module).add("Share Date", () => {
   return (
     <div>
       <ShareDate article={StandardArticle} />
     </div>
   )
 })
-storiesOf("Legacy/Publishing/Byline/NewsByline", module)
+storiesOf("⚠️Legacy/Publishing/Byline/NewsByline", module)
   .add("Byline", () => {
     return (
       <div>
@@ -148,7 +148,7 @@ storiesOf("Legacy/Publishing/Byline/NewsByline", module)
     )
   })
 
-storiesOf("Legacy/Publishing/Byline/AuthorInfo", module)
+storiesOf("⚠️Legacy/Publishing/Byline/AuthorInfo", module)
   .add("Multiple Authors", () => {
     return (
       <div style={{ margin: "20px" }}>
