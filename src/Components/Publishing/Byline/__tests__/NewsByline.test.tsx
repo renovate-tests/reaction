@@ -19,7 +19,7 @@ describe("News Byline", () => {
     expect(byline).toMatchSnapshot()
   })
 
-  it("renders properly when truncated", () => {
+  xit("renders properly when truncated", () => {
     const byline = renderer.create(
       <NewsByline article={NewsArticle} isTruncated />
     )

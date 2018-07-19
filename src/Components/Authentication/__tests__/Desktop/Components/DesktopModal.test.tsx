@@ -1,11 +1,10 @@
 import { mount } from "enzyme"
 import React from "react"
+import Events from "Utils/Events"
 import Icon from "../../../../Icon"
 import { DesktopModal } from "../../../Desktop/Components/DesktopModal"
 
-jest.mock("Utils/track.ts", () => ({
-  track: () => jest.fn(c => c),
-}))
+jest.mock("Utils/Events")
 
 describe("DesktopModal", () => {
   const getWrapper = (props: any = {}) =>
@@ -31,14 +30,13 @@ describe("DesktopModal", () => {
 
   describe("Analytics", () => {
     it("tracks close", () => {
-      const tracking = { trackEvent: jest.fn() }
-      const wrapper = getWrapper({ tracking })
+      const wrapper = getWrapper()
       wrapper
         .find(Icon)
         .at(0)
         .simulate("click")
 
-      expect(tracking.trackEvent).toBeCalledWith({
+      expect(Events.postEvent).toBeCalledWith({
         action: "Click",
         flow: "auth",
         label: "dismiss auth modal",

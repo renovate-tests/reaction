@@ -4,11 +4,6 @@ import React from "react"
 import renderer from "react-test-renderer"
 import * as FullscreenHelpers from "../FullscreenHelpers"
 import { VideoPlayer } from "../VideoPlayer"
-import { track } from "../../../../../Utils/track"
-
-jest.mock("../../../../../Utils/track.ts", () => ({
-  track: jest.fn(),
-}))
 
 jest.useFakeTimers()
 
