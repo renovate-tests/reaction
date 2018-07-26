@@ -1,9 +1,10 @@
 import { Sans } from "@artsy/palette"
 import React, { Component } from "react"
+import styled from "styled-components"
+
 import { Spacer } from "Styleguide/Elements/Spacer"
 import { Placeholder } from "Styleguide/Utils/Placeholder"
-
-import styled from "styled-components"
+import { ItemSummary } from "./ItemSummary"
 
 type Mediator = {
   trigger: (action: string, config?: object) => void
@@ -18,6 +19,7 @@ export class Summary extends Component<SummaryProps> {
     return (
       <>
         <Placeholder height="390px" name="Sidebar" />
+        <ItemSummary />
         <Helper mediator={this.props.mediator} />
       </>
     )
