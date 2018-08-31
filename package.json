@@ -109,6 +109,7 @@
     "fork-ts-checker-webpack-plugin": "^0.3.0",
     "graphql-config-parser": "^1.2.1",
     "graphql-fetch-schema": "^0.8.0",
+    "graphql-tools": "^3.1.1",
     "husky": "^0.13.4",
     "jest": "^23.4.1",
     "jest-styled-components": "^4.11.0-1",
