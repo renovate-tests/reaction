@@ -7,11 +7,13 @@ import { getFarceResult } from "found/lib/server"
 import { getLoadableState } from "loadable-components/server"
 import React, { ComponentType } from "react"
 import ReactDOMServer from "react-dom/server"
+import { RRNLRequestError } from "react-relay-network-modern"
 import serialize from "serialize-javascript"
 import { getUser } from "Utils/getUser"
 import { createMediaStyle } from "Utils/Responsive"
 import { trace } from "Utils/trace"
 import { RouterConfig } from "./"
+import { HTTPError } from "./HTTPError"
 import { createRouteConfig } from "./Utils/createRouteConfig"
 import { matchingMediaQueriesForUserAgent } from "./Utils/matchingMediaQueriesForUserAgent"
 
@@ -134,8 +136,27 @@ export function buildServerApp(config: ServerRouterConfig): Promise<Resolve> {
           scripts: scripts.join("\n"),
         })
       } catch (error) {
-        console.error("[Artsy/Router/buildServerApp] Error:", error)
-        reject(error)
+        if (
+          error instanceof RRNLRequestError &&
+          error.res &&
+          error.res.errors &&
+          error.res.errors.length === 1 &&
+          error.res.errors[0].extensions &&
+          error.res.errors[0].extensions.httpStatusCodes &&
+          error.res.errors[0].extensions.httpStatusCodes.length === 1
+        ) {
+          const err = error.res.errors[0]
+          reject(
+            new HTTPError(
+              err.message,
+              err.extensions.httpStatusCodes[0],
+              error.res.body
+            )
+          )
+        } else {
+          console.error("[Artsy/Router/buildServerApp] Error:", error)
+          reject(error)
+        }
       }
     })
   )
