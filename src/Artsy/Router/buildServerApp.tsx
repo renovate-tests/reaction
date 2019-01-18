@@ -9,6 +9,7 @@ import React, { ComponentType } from "react"
 import ReactDOMServer from "react-dom/server"
 import { RRNLRequestError } from "react-relay-network-modern"
 import serialize from "serialize-javascript"
+import { get } from "Utils/get"
 import { getUser } from "Utils/getUser"
 import { createMediaStyle } from "Utils/Responsive"
 import { trace } from "Utils/trace"
@@ -136,14 +137,15 @@ export function buildServerApp(config: ServerRouterConfig): Promise<Resolve> {
           scripts: scripts.join("\n"),
         })
       } catch (error) {
+        console.log(
+          "sjh",
+          error.req,
+          get(error, e => e.res.errors[0].extensions)
+        )
         if (
           error instanceof RRNLRequestError &&
-          error.res &&
-          error.res.errors &&
-          error.res.errors.length === 1 &&
-          error.res.errors[0].extensions &&
-          error.res.errors[0].extensions.httpStatusCodes &&
-          error.res.errors[0].extensions.httpStatusCodes.length === 1
+          get(error, e => e.res.errors[0].extensions.httpStatusCodes.length) ===
+            1
         ) {
           const err = error.res.errors[0]
           reject(
@@ -154,7 +156,7 @@ export function buildServerApp(config: ServerRouterConfig): Promise<Resolve> {
             )
           )
         } else {
-          console.error("[Artsy/Router/buildServerApp] Error:", error)
+          // console.error("[Artsy/Router/buildServerApp] Error:", error)
           reject(error)
         }
       }
