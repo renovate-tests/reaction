@@ -1,7 +1,7 @@
 import { mount } from "enzyme"
 import "jest-styled-components"
 import React from "react"
-import renderer from "react-test-renderer"
+import renderer, { act } from "react-test-renderer"
 
 import QuickInput from "../QuickInput"
 
@@ -59,7 +59,9 @@ describe("QuickInput", () => {
 
     const root = component.root
     const input = root.find(element => element.type === "input")
-    input.props.onFocus()
+    act(() => {
+      input.props.onFocus()
+    })
 
     expect(component.toJSON()).toMatchSnapshot()
   })
