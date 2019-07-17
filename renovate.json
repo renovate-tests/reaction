@@ -1,5 +1,9 @@
 {
   "extends": ["@artsy:lib"],
   "assignees": ["zephraph"],
+  "packageRules": [{
+    "datasources": ["orb"],
+    "major": { "enabled": true }
+  }],
   "reviewers": ["damassi"]
 }
